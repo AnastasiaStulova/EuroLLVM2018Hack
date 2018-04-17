@@ -655,6 +655,8 @@ llvm::DIType *CGDebugInfo::CreateType(const BuiltinType *BT) {
     return getOrCreateStructPtrType("opencl_queue_t", OCLQueueDITy);
   case BuiltinType::OCLReserveID:
     return getOrCreateStructPtrType("opencl_reserve_id_t", OCLReserveIDDITy);
+  case BuiltinType::OCLIntPtr:
+    return getOrCreateStructPtrType("opencl_int_ptr_t", OCLReserveIDDITy);
 
   case BuiltinType::UChar:
   case BuiltinType::Char_U:

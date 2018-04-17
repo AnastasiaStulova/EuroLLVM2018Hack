@@ -153,6 +153,9 @@ serialization::TypeIdxFromBuiltin(const BuiltinType *BT) {
   case BuiltinType::OCLReserveID:
     ID = PREDEF_TYPE_RESERVE_ID_ID;
     break;
+  case BuiltinType::OCLIntPtr:
+    ID = PREDEF_TYPE_OCL_INT_PTR_ID;
+    break;
   case BuiltinType::BuiltinFn:
     ID = PREDEF_TYPE_BUILTIN_FN;
     break;

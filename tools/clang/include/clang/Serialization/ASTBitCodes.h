@@ -927,14 +927,17 @@ namespace serialization {
       /// \brief OpenCL reserve_id type.
       PREDEF_TYPE_RESERVE_ID_ID = 41,
 
+      /// \bried OpenCL int ptr type.
+      PREDEF_TYPE_OCL_INT_PTR_ID = 42,
+
       /// \brief The placeholder type for OpenMP array section.
-      PREDEF_TYPE_OMP_ARRAY_SECTION = 42,
+      PREDEF_TYPE_OMP_ARRAY_SECTION = 43,
 
       /// \brief The '__float128' type
-      PREDEF_TYPE_FLOAT128_ID = 43,
+      PREDEF_TYPE_FLOAT128_ID = 44,
 
       /// \brief The '_Float16' type
-      PREDEF_TYPE_FLOAT16_ID = 44,
+      PREDEF_TYPE_FLOAT16_ID = 45,
 
       /// \brief OpenCL image types with auto numeration
 #define IMAGE_TYPE(ImgType, Id, SingletonId, Access, Suffix) \
