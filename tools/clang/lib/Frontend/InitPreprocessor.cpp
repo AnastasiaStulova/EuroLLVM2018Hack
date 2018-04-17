@@ -804,7 +804,7 @@ static void InitializePredefinedMacros(const TargetInfo &TI,
   DefineType("__INTPTR_TYPE__", TI.getIntPtrType(), Builder);
   DefineFmt("__INTPTR", TI.getIntPtrType(), TI, Builder);
   DefineTypeWidth("__INTPTR_WIDTH__", TI.getIntPtrType(), TI, Builder);
-  DefineType("__SIZE_TYPE__", TI.getSizeType(), Builder);
+  if (!LangOpts.OpenCL) DefineType("__SIZE_TYPE__", TI.getSizeType() , Builder);
   DefineFmt("__SIZE", TI.getSizeType(), TI, Builder);
   DefineTypeWidth("__SIZE_WIDTH__", TI.getSizeType(), TI, Builder);
   DefineType("__WCHAR_TYPE__", TI.getWCharType(), Builder);

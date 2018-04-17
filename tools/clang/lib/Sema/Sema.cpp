@@ -253,6 +253,10 @@ void Sema::Initialize() {
   // Initialize predefined OpenCL types and supported extensions and (optional)
   // core features.
   if (getLangOpts().OpenCL) {
+    if (getLangOpts().GenericSizeT)
+      addImplicitTypedef("size_t", Context.OCLIntPtrTy);
+    else
+      addImplicitTypedef("size_t", Context.getSizeType());
     getOpenCLOptions().addSupport(Context.getTargetInfo().getSupportedOpenCLOpts());
     getOpenCLOptions().enableSupportedCore(getLangOpts().OpenCLVersion);
     addImplicitTypedef("sampler_t", Context.OCLSamplerTy);

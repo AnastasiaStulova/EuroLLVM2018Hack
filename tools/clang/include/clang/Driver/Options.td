@@ -737,6 +737,8 @@ def fno_profile_use : Flag<["-"], "fno-profile-use">,
 
 def fblocks : Flag<["-"], "fblocks">, Group<f_Group>, Flags<[CC1Option]>,
   HelpText<"Enable the 'blocks' language feature">;
+def fgeneric_size_t : Flag<["-"], "fgeneric_size_t">, Group<f_Group>, Flags<[CC1Option]>,
+  HelpText<"Enable generic size_t">;
 def fbootclasspath_EQ : Joined<["-"], "fbootclasspath=">, Group<f_Group>;
 def fborland_extensions : Flag<["-"], "fborland-extensions">, Group<f_Group>, Flags<[CC1Option]>,
   HelpText<"Accept non-standard constructs supported by the Borland compiler">;

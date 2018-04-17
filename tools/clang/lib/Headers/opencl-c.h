@@ -57,7 +57,7 @@ typedef unsigned long ulong;
  * defined in table 4.3 is 32-bits and is a 64-bit unsigned integer if
  * CL_DEVICE_ADDRESS_BITS is 64-bits.
  */
-typedef __SIZE_TYPE__ size_t;
+//typedef __SIZE_TYPE__ size_t;
 
 /**
  * A signed integer type that is the result of subtracting two pointers.
